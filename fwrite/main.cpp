@@ -25,12 +25,10 @@ int main (int argc, char *argv[]) {
         fbuffer = (char*)malloc(lSize + 1);
 
         // Read into the buffer
-        cout << "Read File" << endl;
         result = fread(fbuffer, sizeof(char), lSize, input_file);
         if (result != lSize) {
             cout << "Error reading file" << endl;
         }
-        cout << "File Read" << endl;
     }
     
     for (size_t i = 0; i < lSize; ++i) {
@@ -41,7 +39,6 @@ int main (int argc, char *argv[]) {
         }
     }
 
-    cout << "Write File" << endl;
     fwrite(fbuffer, sizeof(char), lSize, output_file);
 
     fclose(input_file);
