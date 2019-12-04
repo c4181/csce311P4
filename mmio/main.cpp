@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Open the output file
-    write_fd = open("mmio.txt", O_RDWR | O_CREAT | O_TRUNC);
+    write_fd = open("mmio.txt", O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
     if (write_fd == -1) {
         cout << "Error opening write file" << endl;
     }
