@@ -16,6 +16,16 @@ using std::toupper;
 
 constexpr auto BUFFER_SIZE = 256;
 
+/***************************************************************************
+ * Author: Christopher Moyer
+ * Date: December 6th, 2019
+ *
+ * This program will read in a text file, flip the case of all letters,
+ * and then write to a new file. All file input/output is done using
+ * the read/write linux system calls.
+ *
+**/
+
 int main (int argc, char *argv[]) {
     int input_fd, read_output_fd;
     ssize_t in, out, result;

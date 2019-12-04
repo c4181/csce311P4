@@ -12,13 +12,23 @@ using std::islower;
 using std::tolower;
 using std::toupper;
 
+  
+/***************************************************************************
+ * Author: Christopher Moyer
+ * Date: December 6th, 2019
+ *
+ * This program will read in a text file, flip the case of all letters,
+ * and then write to a new file. All file input/output is done using
+ * memory mapped file I/O.
+ *
+**/
+
 int main(int argc, char *argv[]) {
     char *read_addr;
     char *write_addr;
     int read_fd, write_fd;
     struct stat sb;
     size_t length;
-    ssize_t s;
 
     // Open and map input file
     read_fd = open(argv[1], O_RDONLY);
