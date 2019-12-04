@@ -27,7 +27,7 @@ int main (int argc, char *argv[]) {
         cout << "Error opening file" << endl;
     }
 
-    read_output_fd = open ("read.txt", O_WRONLY | O_CREAT);
+    read_output_fd = open ("read.txt", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
     if (read_output_fd == -1) {
         cout << "Error opening read output" << endl;
     }
